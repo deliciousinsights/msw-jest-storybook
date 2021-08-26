@@ -5,7 +5,7 @@ module.exports = {
   entry: {
     index: './src/index.js',
   },
-  devtool: 'inline-source-map',
+  devtool: 'eval-source-map',
   devServer: {
     static: './dist',
   },

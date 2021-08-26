@@ -1,17 +1,12 @@
-import { getPosts } from './api'
+import Posts from './components/Posts'
 
 buildHTML()
 
-async function buildHTML() {
-  const posts = await getPosts()
-  const postsRows = posts.map(
-    ({ id, title }) =>
-      `<tr><td>${id}</td><td class="mdl-data-table__cell--non-numeric">${title}</td></tr>`
-  )
-
-  document.getElementById('app').innerHTML = `
-    <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
-      <tbody>${postsRows.join('')}</tbody>
-    </table>
-  `
+function buildHTML() {
+  const app = document.getElementById('app')
+  const updatedApp = document.createElement('div')
+  updatedApp.id = 'app'
+  updatedApp.appendChild(Posts())
+  const container = app.parentNode
+  container.replaceChild(updatedApp, app)
 }
