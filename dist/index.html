@@ -16,7 +16,22 @@
   </head>
 
   <body>
-    <div id="app">This should be replaced when JS is loaded</div>
-    <script src="main.js"></script>
+    <div class="mdl-grid">
+      <div class="mdl-cell mdl-cell--10-col mdl-cell--12-col-tablet">
+        <h1>Jest and MSW sandbox</h1>
+        <p>
+          Please have a look at the source code to know more about the way it
+          works.
+        </p>
+        <p>
+          The data you can see are loaded from
+          <a href="https://jsonplaceholder.typicode.com/guide/"
+            >jsonplaceholder.typicode.com</a
+          >.
+        </p>
+        <div id="app">This should be replaced when JS is loaded</div>
+      </div>
+    </div>
+    <script src="index.bundle.js"></script>
   </body>
 </html>
