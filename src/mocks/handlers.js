@@ -13,7 +13,7 @@ export const handlers = [
 
     if (id === UNKNOWN_POST_ID) {
       return res(
-        ctx.status(403),
+        ctx.status(404),
         ctx.json({
           error: `Could not find post #${id}`,
         })
